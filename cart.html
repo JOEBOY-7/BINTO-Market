@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - BINTOmarket</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="cart-header">
+    <h1 class="logo">BINTO<span>market</span></h1>
+    <nav>
+      <a href="customer-shop.html">🛍 Shop</a>
+      <a href="wishlist.html">❤️ Wishlist</a>
+      <a href="cart.html" class="active">🛒 Cart</a>
+      <a href="login.html" onclick="logout()">🚪 Logout</a>
+    </nav>
+  </header>
+
+  <!-- Cart Section -->
+  <main class="cart-container">
+    <h2>Your Shopping Cart</h2>
+
+    <!-- Cart Items -->
+    <div class="cart-item">
+      <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSRW80yAQuQxluavQ4Br2PlKeVDu1eav6LN_RSmCxJM7ov3ZH4P9TxBsslNvufvAjg394O4eBhCMmC4AWquz_7Gw8R1kEG2d4ETq5Gj-NoBkSP6VjpoYrJgag&usqp=CAc" alt="Headphones">
+      <div class="item-details">
+        <h3>Wireless Headphones</h3>
+        <p>$99</p>
+        <div class="quantity">
+          <button class="qty-btn">-</button>
+          <input type="text" value="1">
+          <button class="qty-btn">+</button>
+        </div>
+      </div>
+      <button class="remove-btn">Remove</button>
+    </div>
+
+    <div class="cart-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAtQrRmkf5TZAqhQ0J-Z5z-HzX97ZHNirMtQ&s" alt="Smart Watch">
+      <div class="item-details">
+        <h3>Smart Watch</h3>
+        <p>$149</p>
+        <div class="quantity">
+          <button class="qty-btn">-</button>
+          <input type="text" value="2">
+          <button class="qty-btn">+</button>
+        </div>
+      </div>
+      <button class="remove-btn">Remove</button>
+    </div>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary">
+      <h3>Order Summary</h3>
+      <p>Subtotal: <span>$397</span></p>
+      <p>Shipping: <span>$20</span></p>
+      <hr>
+      <h3>Total: <span>$417</span></h3>
+      <a class="btn btn--block" href="checkout.html">Proceed to Checkout</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 BINTOmarket. All rights reserved.</p>
+  </footer>
+
+  <script src="carts.js"></script>
+</body>
+</html>

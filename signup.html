@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - BINTOmarket</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <main>
+    <form id="signup-form">
+      <h1>Create Account 🚀</h1>
+      <p class="subtitle">Join BINTOmarket and start your journey</p>
+
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="password" placeholder="Password" required>
+
+      <!-- Role Selector -->
+      <label class="role-label">choose-path:</label>
+      <select id="signup-role" required>
+        <option value=""></option>
+        <option value="customer">Customer</option>
+        <option value="marketer">Marketer</option>
+      </select>
+
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>

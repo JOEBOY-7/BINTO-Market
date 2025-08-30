@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacts</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">
+<span></span><span></span><span></span>
+</button>
+<nav id="nav" class="site-nav" aria-label="Primary">
+<ul>
+<li><a href="index.html#features">Home</a></li>
+<li><a href="marketer.html">Shop</a></li>
+<li><a class="btn btn--sm" href="contactC.html">Customer</a></li>
+</ul>
+</nav>
+    </header>
+    <!-- CONTACT / CTA -->
+<section id="contact" class="section section--tight">
+<div class="container grid grid--2">
+<div>
+<h2>Ready to reach customers?</h2>
+<p class="muted">Get your products ready and start making sales!!</p>
+<ul class="bullets">
+<li>⚙️ Fast onboarding</li>
+<li>🔒 Privacy-first</li>
+<li>🧩 Works with your stack</li>
+</ul>
+</div>
+
+<form class="card form" aria-labelledby="cta-head" novalidate>
+<h3 id="cta-head">Setup marketer account</h3>
+<label>
+<span>Name</span>
+<input name="name" type="text" placeholder="Jane Doe" required />
+</label>
+<label>
+<span>Email</span>
+<input name="email" type="email" placeholder="jane@company.com" required />
+</label>
+<label>
+<span>Username</span>
+<input name="username" type="text" placeholder/>
+</label>
+<label>
+<span>Password</span>
+<input name="password" type="text" placeholder/>
+</label>
+<label>
+<button class="btn btn--block" type="submit">Create/Login</button>
+<p class="form__msg" role="status" aria-live="polite"></p>
+<li><a href="contactC.html" id="resetRole">Switch Role</a></li>
+</form>
+</div>
+</section>
+</main>
+</body>
+</html>

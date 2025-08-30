@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - BINTOmarket</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="checkout-header">
+    <h1 class="logo">BINTO<span>market</span></h1>
+    <nav>
+      <a href="customer-shop.html">🛍 Shop</a>
+      <a href="cart.html">🛒 Cart</a>
+      <a href="checkout.html" class="active">💳 Checkout</a>
+    </nav>
+  </header>
+
+  <!-- Checkout Container -->
+  <main class="checkout-container">
+    <!-- Billing & Shipping Form -->
+    <section class="form-section">
+      <h2>Billing & Shipping Information</h2>
+      <form id="checkout-form">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="john@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" id="address" placeholder="123 Main St" required>
+        </div>
+
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" placeholder="New York" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" id="state" placeholder="NY" required>
+          </div>
+
+          <div class="form-group">
+            <label for="zip">ZIP Code</label>
+            <input type="text" id="zip" placeholder="10001" required>
+          </div>
+        </div>
+
+        <h2>Payment Details</h2>
+        <div class="form-group">
+          <label for="card">Card Number</label>
+          <input type="text" id="card" placeholder="1234 5678 9012 3456" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="exp">Expiry Date</label>
+            <input type="text" id="exp" placeholder="MM/YY" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="123" required>
+          </div>
+        </div>
+
+        <button type="submit" class="place-order-btn">Place Order</button>
+      </form>
+    </section>
+
+    <!-- Order Summary -->
+    <aside class="summary-section">
+      <h2>Order Summary</h2>
+      <div class="summary-item">
+        <p>Wireless Headphones</p>
+        <span>$99</span>
+      </div>
+      <div class="summary-item">
+        <p>Smart Watch x2</p>
+        <span>$298</span>
+      </div>
+      <hr>
+      <div class="summary-item">
+        <p>Shipping</p>
+        <span>$20</span>
+      </div>
+      <div class="summary-total">
+        <p>Total</p>
+        <span>$417</span>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 BINTOmarket. All rights reserved.</p>
+  </footer>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

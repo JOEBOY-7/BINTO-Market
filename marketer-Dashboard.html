@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketer Dashboard - BINTOmarket</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo">BINTO<span>market</span></h2>
+    <nav>
+      <a href="#">📊 Dashboard</a>
+      <a href="#">📢 Campaigns</a>
+      <a href="#">📈 Analytics</a>
+      <a href="#">💼 Earnings</a>
+      <a href="#">👥 Leads</a>
+      <a href="#" onclick="logout()">🚪 Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+    <header>
+      <h1>Welcome, Marketer</h1>
+      <p>Manage your campaigns and track performance here.</p>
+    </header>
+
+    <!-- Dashboard Pads -->
+    <section class="cards">
+      <div class="card">
+        <h3>Active Campaigns</h3>
+        <p>5 Running</p>
+      </div>
+
+      <div class="card">
+        <h3>New Leads</h3>
+        <p>120 This Month</p>
+      </div>
+
+      <div class="card">
+        <h3>Earnings</h3>
+        <p>$2,450</p>
+      </div>
+
+      <div class="card">
+        <h3>Conversion Rate</h3>
+        <p>8.7%</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>
