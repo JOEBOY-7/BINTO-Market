@@ -10,12 +10,73 @@
   <!-- Header -->
   <header class="checkout-header">
     <h1 class="logo">BINTO<span>market</span></h1>
-    <nav>
+    <nav id="shopNav" class="shop-nav">
+      <button id="navToggle" aria-label="Toggle navigation" class="nav-toggle">☰</button>
+      <div class="nav-links">
       <a href="customer-shop.html">🛍 Shop</a>
+      <a href="wishlist.html">❤️ Wishlist</a>
       <a href="cart.html">🛒 Cart</a>
       <a href="checkout.html" class="active">💳 Checkout</a>
+      <a href="login.html">🚪 Logout</a>
+      </div>
     </nav>
+    <style>
+      .shop-nav {
+      position: relative;
+      }
+      .nav-toggle {
+        color: #fff;
+      background: #111827;
+      border: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      display: flex;
+      }
+      .nav-links {
+      display: flex;
+      gap: 1em;
+      background: #111827;
+      padding: 1em 0;
+      width: 100%;
+      max-width: 500px;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+      color: #fff;
+      border-radius: 8px;
+      }
+      .nav-links a {
+      color: #fff;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      }
+      @media (max-width: 600px) {
+      .nav-toggle {
+        display: inline-block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 2.5em;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #111827;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        width: 90vw;
+        max-width: 350px;
+        z-index: 10;
+        border-radius: 8px;
+      }
+      .nav-links.active {
+        display: flex;
+        background: #111827;
+      }
+      }
+    </style>
   </header>
+  
 
   <!-- Checkout Container -->
   <main class="checkout-container">
@@ -86,7 +147,7 @@
       </div>
       <div class="summary-item">
         <p>Smart Watch x2</p>
-        <span>$298</span>
+        <span>$49</span>
       </div>
       <hr>
       <div class="summary-item">
@@ -95,7 +156,7 @@
       </div>
       <div class="summary-total">
         <p>Total</p>
-        <span>$417</span>
+        <span>$217</span>
       </div>
     </aside>
   </main>
@@ -105,5 +166,12 @@
   </footer>
 
   <script src="checkout.js"></script>
+  <script>
+      const navToggle = document.getElementById('navToggle');
+      const navLinks = document.querySelector('.nav-links');
+      navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      });
+    </script>
 </body>
 </html>
