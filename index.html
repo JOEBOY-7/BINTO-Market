@@ -13,21 +13,16 @@
 <header class="site-header" data-elevate>
 <div class="container">
 <a class="brand" href="index.html" aria-label="BINTOMarket home">
-    <svg width="36" height="36" viewBox="0 0 100 100" xmins="http://www.w3.org/2000/svg" aria-hidden="true">
+    <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <!-- Background Circles-->
          <circle cx="50" cy="50" r="48" fill="#1E40AF"/>
          <!--shopping cart style "B"-->
          <path d="M30 30h25c8 0 15 6 15 14s-7 14-15 14H30V30zm0 28h28c8 0 15 14s-7 14-15 14H30V58z" fill="#10B981"/>
          <!--Small growth arrow -->
-         <path d="M55 20l10 10 10-10" STROKE="white" stroke-width="4" fill="none" stroke-linecap="round"/>
-        </svg>
-        <span>BINTO</span style="color:#10B981">market</span></span>
-        </a>
+         <path d="M55 20l10 10 10-10" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
     </svg>
-<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">
-  
-<span></span><span></span><span></span>
-</button>
+    <span style="color:#10B981">BINTO</span><span>market</span>
+</a>
 <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">
   <span></span><span></span><span></span>
 </button>
@@ -41,6 +36,8 @@
   </ul>
 </nav>
 </div>
+<!-- Menu Bar -->
+<!-- Removed duplicate menu-bar navigation for cleaner structure and accessibility -->
 </header>
 
 <main id="main">
@@ -109,34 +106,31 @@
 <section class="section section--tight">
 <div class="container narrow">
 <h2>Choose your path</h2>
-<p class="muted"></p>Are you here to shop or to sell? Choose your path and get started with BINTOmarket today.
+<p class="muted">Are you here to shop or to sell? Choose your path and get started with BINTOmarket today.</p>
 <a class="btn" href="index.html">Get started</a>
 </div>
 </section>
-</main>
 
 <footer class="site-footer">
 <div class="container footer-grid">
 <div class="brand brand--footer">
-<svg width="36" height="36" viewBox="0 0 100 100" xmins="http://www.w3.org/2000/svg" aria-hidden="true">
+<div class="brand brand--footer">
+    <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <!-- Background Circles-->
          <circle cx="50" cy="50" r="48" fill="#1E40AF"/>
          <!--shopping cart style "B"-->
          <path d="M30 30h25c8 0 15 6 15 14s-7 14-15 14H30V30zm0 28h28c8 0 15 14s-7 14-15 14H30V58z" fill="#10B981"/>
          <!--Small growth arrow -->
-         <path d="M55 20l10 10 10-10" STROKE="white" stroke-width="4" fill="none" stroke-linecap="round"/>
-        </svg>
-        <span>BINTO</span style="color:#10B981">market</span></span>
-        </a>
+         <path d="M55 20l10 10 10-10" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </svg>
+    <span style="color:#10B981">BINTO</span><span>market</span>
 </div>
-<nav aria-label="Footer">
 <ul class="footer-links">
 <li><a href="index.html#features">Features</a></li>
 <li><a href="index.html#pricing">Pricing</a></li>
 <li><a href="about.html" class="is-active">About</a></li>
 <li><a href="#" rel="nofollow">Terms</a></li>
 </ul>
-</nav>
 </div>
 </footer>
 <footer>
@@ -144,5 +138,24 @@
   </footer>
 
 <script src="script.js"></script>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('nav');
+
+  toggle.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+
+    // Toggle nav visibility
+    if (expanded) {
+      nav.style.opacity = '0';
+      nav.style.pointerEvents = 'none';
+    } else {
+      nav.style.opacity = '1';
+      nav.style.pointerEvents = 'auto';
+    }
+  });
+</script>
+
 </body>
 </html>
