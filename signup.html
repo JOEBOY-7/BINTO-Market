@@ -12,14 +12,19 @@
       <h1>Create Account 🚀</h1>
       <p class="subtitle">Join BINTOmarket and start your journey</p>
 
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <input type="password" placeholder="Password" required>
+      <label for="signup-name">Full Name:</label>
+      <input type="text" id="signup-name" name="fullname" placeholder="Full Name" required>
+
+      <label for="signup-email">Email Address:</label>
+      <input type="email" id="signup-email" name="email" placeholder="Email Address" required>
+
+      <label for="signup-password">Password:</label>
+      <input type="password" id="signup-password" name="password" placeholder="Password" required>
 
       <!-- Role Selector -->
-      <label class="role-label">choose-path:</label>
-      <select id="signup-role" required>
-        <option value=""></option>
+      <label for="signup-role" class="role-label">Choose Path:</label>
+      <select id="signup-role" name="role" required>
+        <option value="">Select Role</option>
         <option value="customer">Customer</option>
         <option value="marketer">Marketer</option>
       </select>

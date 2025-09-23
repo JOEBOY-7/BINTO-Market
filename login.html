@@ -12,20 +12,61 @@
       <h1>Welcome Back 👋</h1>
       <p class="subtitle">Login to your BINTOmarket account</p>
 
-      <input type="email" placeholder="Email Address" required>
-      <input type="password" placeholder="Password" required>
+      <label for="login-email">Email Address:</label>
+      <input type="email" id="login-email" name="email" placeholder="Email Address" required>
+
+      <label for="login-password">Password:</label>
+      <input type="password" id="login-password" name="password" placeholder="Password" required>
 
       <!-- Role Selector -->
-      <label class="role-label">choose-path:</label>
-      <select id="login-role" required>
-        <option value=""></option>
-        <option value="customer">Customer</option>
-        <option value="marketer">Marketer</option>
+      <label for="login-role" class="role-label">Choose Path:</label>
+      <select id="login-role" name="role" required>
+      <option value="">Select Role</option>
+      <option value="customer">Customer</option>
+      <option value="marketer">Marketer</option>
       </select>
 
       <button type="submit">Login</button>
       <p>Don’t have an account? <a href="signup.html">Sign Up</a></p>
+      <div id="login-message"></div>
     </form>
+    <script>
+      // Load previous login email if available
+      document.addEventListener('DOMContentLoaded', function() {
+      const emailInput = document.getElementById('login-email');
+      const lastEmail = localStorage.getItem('lastLoginEmail');
+      if (lastEmail) {
+        emailInput.value = lastEmail;
+      }
+      });
+
+      // Simple verification and remember login
+      document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+      const role = document.getElementById('login-role').value;
+      const messageDiv = document.getElementById('login-message');
+
+      // Dummy users for demo
+      const users = [
+        { email: 'customer@example.com', password: 'customer123', role: 'customer' },
+        { email: 'marketer@example.com', password: 'marketer123', role: 'marketer' }
+      ];
+
+      const user = users.find(u => u.email === email && u.password === password && u.role === role);
+
+      if (user) {
+        localStorage.setItem('lastLoginEmail', email);
+        messageDiv.textContent = 'Login successful!';
+        messageDiv.style.color = 'green';
+        // Redirect or further logic here
+      } else {
+        messageDiv.textContent = 'Invalid credentials or role.';
+        messageDiv.style.color = 'red';
+      }
+      });
+    </script>
   </main>
 
   <script src="auth.js"></script>

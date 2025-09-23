@@ -2,12 +2,12 @@
 const toggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('#nav');
 if (toggle && nav) {
-toggle.addEventListener('click', () => {
-const open = nav.classList.toggle('open');
-toggle.setAttribute('aria-expanded', String(open));
-// animate burger into X
-toggle.classList.toggle('x');
-});
+    toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+        // animate burger into X
+        toggle.classList.toggle('x');
+    });
 }
 
 // Make header elevate on scroll
@@ -97,38 +97,7 @@ if (resetLink) {
     window.location.href = "index.html";
   });
 }
-// Check if user has a saved role
-document.addEventListener("DOMContentLoaded", () => {
-  const userRole = localStorage.getItem("userRole");
-
-  if (userRole) {
-    if (userRole === "customer") {
-      window.location.href = "customer.html";
-    } else if (userRole === "marketer") {
-      window.location.href = "marketer.html";
-    }
-  }
-
-  // Add click listeners to path buttons
-  const customerBtn = document.querySelector(".path-card.customer");
-  const marketerBtn = document.querySelector(".path-card.marketer");
-
-  if (customerBtn) {
-    customerBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      localStorage.setItem("userRole", "customer");
-      window.location.href = "customer.html";
-    });
-  }
-
-  if (marketerBtn) {
-    marketerBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      localStorage.setItem("userRole", "marketer");
-      window.location.href = "marketer.html";
-    });
-  }
-})
+// (Duplicate DOMContentLoaded event listener removed)
 // For Signup
 //document.getElementById("signup-form")?.addEventListener("submit", function(e) {
   //e.preventDefault();
@@ -162,4 +131,7 @@ function addToCart(name, price) {
   localStorage.setItem("cart", JSON.stringify(cart));
   cartCountEl.textContent = cart.length;
   alert("🛒 " + name + " added to cart!");
-}
+}document.getElementById("checkout-form")?.addEventListener("submit", function(e) {
+  e.preventDefault();
+  window.location.href = "order-confirmation.html";
+});
