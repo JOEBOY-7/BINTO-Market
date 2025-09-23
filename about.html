@@ -195,17 +195,27 @@
 </div>
 <p class="muted">© <span id="y"></span> BINTOMarket. All rights reserved.</p>
 </div>
-<nav aria-label="Footer">
-<ul class="footer-links">
-<li><a href="about.html">About</a></li>
-<li><a href="#pricing">Pricing</a></li>
-<li><a href="#features">Features</a></li>
-<li><a href="#" rel="nofollow">Privacy</a></li>
-</ul>
-</nav>
-</div>
 </footer>
 
 <script src="script.js"></script>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('nav');
+
+  toggle.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+
+    // Toggle nav visibility
+    if (expanded) {
+      nav.style.opacity = '0';
+      nav.style.pointerEvents = 'none';
+    } else {
+      nav.style.opacity = '1';
+      nav.style.pointerEvents = 'auto';
+    }
+  });
+</script>
+
 </body>
 </html>
