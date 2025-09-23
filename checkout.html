@@ -10,74 +10,79 @@
   <!-- Header -->
   <header class="checkout-header">
     <h1 class="logo">BINTO<span>market</span></h1>
-    <nav id="shopNav" class="shop-nav">
-      <button id="navToggle" aria-label="Toggle navigation" class="nav-toggle">☰</button>
-      <div class="nav-links">
-      <a href="customer-shop.html">🛍 Shop</a>
-      <a href="wishlist.html">❤️ Wishlist</a>
-      <a href="cart.html">🛒 Cart</a>
-      <a href="checkout.html" class="active">💳 Checkout</a>
-      <a href="login.html">🚪 Logout</a>
+   <nav id="shopNav" class="shop-nav">
+      <button id="navToggle" aria-label="Toggle navigation" class="nav-toggle" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">🏠 Home</a>
+        <a href="customer-shop.html">🛍 Shop</a>
+        <a href="wishlist.html">❤️ Wishlist</a>
+        <a href="cart.html">🛒 Cart</a>
+        <a href="login.html">🚪 Logout</a>
       </div>
     </nav>
     <style>
       .shop-nav {
-      position: relative;
+        position: relative;
       }
       .nav-toggle {
+        background: #111827;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+        display: none;
         color: #fff;
-      background: #111827;
-      border: none;
-      font-size: 1.5em;
-      cursor: pointer;
-      display: flex;
+        padding: 0.5em 1em;
+        border-radius: 4px;
       }
       .nav-links {
-      display: flex;
-      gap: 1em;
-      background: #111827;
-      padding: 1em 0;
-      width: 100%;
-      max-width: 500px;
-      position: absolute;
-      left: 50%;
-      top: 100%;
-      transform: translateX(-50%);
-      color: #fff;
-      border-radius: 8px;
+        display: flex;
+        gap: 1em;
+        background: transparent;
+        padding: 0;
+        width: auto;
+        position: static;
+        color: #fff;
+        border-radius: 0;
+        align-items: center;
       }
       .nav-links a {
-      color: #fff;
-      padding: 0.5em 1em;
-      text-decoration: none;
+        color: #fff;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background 0.2s;
+      }
+      .nav-links a:hover,
+      .nav-links a:focus {
+        background: #374151;
       }
       @media (max-width: 600px) {
-      .nav-toggle {
-        display: inline-block;
-      }
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 2.5em;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #111827;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        width: 90vw;
-        max-width: 350px;
-        z-index: 10;
-        border-radius: 8px;
-      }
-      .nav-links.active {
-        display: flex;
-        background: #111827;
-      }
+        .nav-toggle {
+          display: inline-block;
+        }
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 2.5em;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #111827;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          width: 90vw;
+          max-width: 350px;
+          z-index: 10;
+          border-radius: 8px;
+          padding: 1em 0;
+        }
+        .nav-links.active {
+          display: flex;
+        }
       }
     </style>
   </header>
   
-
+  
   <!-- Checkout Container -->
   <main class="checkout-container">
     <!-- Billing & Shipping Form -->
@@ -175,3 +180,4 @@
     </script>
 </body>
 </html>
+
